@@ -44,7 +44,7 @@ const StudentTestPerformance = () => {
     <>
       <div className={classes.grid}>
         <div>
-          <Navbar active={'marks'} />
+          <Navbar active={'marks'} user="student" />
         </div>
         <div className="p-10">
           <div class="grid place-items-center pb-10">

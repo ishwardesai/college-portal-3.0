@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className={`${classes['dashboard-grid']} `}>
         <div className={classes.box}>
-          <Navbar />
+          <Navbar active="student" user="student" />
         </div>
         <div className={`${classes.box} ${classes.content}`}>
           <div className={classes.chart}>
