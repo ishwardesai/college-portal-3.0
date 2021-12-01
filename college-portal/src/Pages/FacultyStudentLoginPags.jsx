@@ -33,7 +33,7 @@ const FacultyStudentLoginPags = () => {
       <div className="row" id="trail">
         <div className="col-md-6"></div>
         <div className="col-md-6">
-          <div className="pt-5 flex justify-end row m-5">
+          <div className="pt-5 flex justify-end row m-5 mt-0">
             {/* Extra Faculty */}
             <div class="w-96 pr-10">
               <form
