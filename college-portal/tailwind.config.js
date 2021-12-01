@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'nav-active': '#5E3FC6',
+        'nav-active': '#344CB7',
         'nav-inactive': '#ACB1BB',
         green: {
           light: '#EAF9E6',
         },
         peach: '#F5EDE7',
         orange: '#f37658',
-        'blue-card': '#5e3ec5',
+        'blue-card': '#344CB7',
       },
     },
   },

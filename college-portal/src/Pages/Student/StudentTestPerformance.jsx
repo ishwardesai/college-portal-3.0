@@ -57,41 +57,41 @@ const StudentTestPerformance = () => {
                   INTERNAL TEST 1
                 </h4>
                 <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-200">
+                  <thead className="bg-blue-800">
                     <tr>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         S.No
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         Subject Code
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         Subject Name
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         Obtained Marks
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         Total Marks
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                       >
                         Percentage
                       </th>

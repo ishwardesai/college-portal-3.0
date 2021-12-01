@@ -63,53 +63,53 @@ const Home = () => {
           <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div className="shadow-lg overflow-hidden border-b border-gray-200 sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-200">
+                <thead className="bg-blue-800">
                   <tr>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       S.No
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Subject Code
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Subject Name
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Maximum Hours
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Present Hours
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Absent Hours
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Total Hours
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-sm font-bold text-gray-800 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-sm font-bold text-gray-50 uppercase tracking-wider"
                     >
                       Attendence
                     </th>
