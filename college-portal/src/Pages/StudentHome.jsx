@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <div className={`${classes['dashboard-grid']} text-center`}>
+      <div className={`${classes['dashboard-grid']} `}>
         <div className={classes.box}>
           <Navbar />
         </div>
@@ -150,7 +150,7 @@ const Home = () => {
               </div>
             </section>
           </div>
-          <div className={`${classes.info} p-8`}>
+          <div className={`${classes.info} p-8 text-center`}>
             <div className={`${classes['info-box']} rounded-xl bg-green-light`}>
               <p>Attendence Here</p>
             </div>
