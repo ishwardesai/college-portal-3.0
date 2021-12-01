@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
-import classnames from 'classnames';
+import React, { useState, useEffect } from "react";
+import { useHistory, Link } from "react-router-dom";
+import classnames from "classnames";
 
-import '../Style/facultyStudentLogin.css';
+import "../Style/facultyStudentLogin.css";
 
 const FacultyStudentLoginPags = () => {
-  const [facultyRegNum, setFacultyRegNum] = useState('');
-  const [facultyPassword, setFacultyPassword] = useState('');
-  const [studentRegNum, setStudentRegNum] = useState('');
-  const [studentPassword, setStudentPassword] = useState('');
+  const [facultyRegNum, setFacultyRegNum] = useState("");
+  const [facultyPassword, setFacultyPassword] = useState("");
+  const [studentRegNum, setStudentRegNum] = useState("");
+  const [studentPassword, setStudentPassword] = useState("");
   const [studentLogin, setStudentLogin] = useState(false);
   const [facultyLogin, setfacultyLogin] = useState(false);
+  const [login,setLogin] = useState('student')
 
   const history = useHistory();
 
@@ -18,24 +19,25 @@ const FacultyStudentLoginPags = () => {
     e.preventDefault();
     let registrationNumber;
     let password;
-    history.push('/faculty');
+    history.push("/faculty");
   };
 
   const studentFormHandler = (e) => {
     e.preventDefault();
     let registrationNumber;
     let password;
-    history.push('/home');
+    history.push("/home");
   };
 
   return (
     <div className="container-fluid">
       <div className="row" id="trail">
         <div className="col-md-6"></div>
-        <div className="col-md-6">
+        <div className="col-md-6 grid place-items-center pt-48">
+         {login==='faculty'? 
           <div className="pt-5 flex justify-end row m-5 mt-0">
             {/* Extra Faculty */}
-            <div class="w-96 pr-10">
+            <div class="w-96 pr-10 grid">
               <form
                 class="bg-blue-100 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4"
                 noValidate
@@ -91,61 +93,9 @@ const FacultyStudentLoginPags = () => {
                 </div>
               </form>
             </div>
-            {/* Extra Faculty */}
+          </div> :
 
-            {/* <div
-              className="w-96"
-              style={{
-                backgroundColor: 'white',
-                borderRadius: '1.2rem',
-                padding: '1rem 1rem 0rem 1rem',
-              }}
-            >
-              <div>
-                <h3 className="text-center ">FACULTY LOGIN</h3>
-                <form noValidate onSubmit={facultyFormHandler}>
-                  <div className="form-group">
-                    <label htmlFor="facRegId">Registration Number</label>
-                    <input
-                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      placeholder="Username"
-                      onChange={(e) => setFacultyRegNum(e.target.value)}
-                      type="text"
-                      value={facultyRegNum}
-                      className={classnames('form-control')}
-                      id="facRegId"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="passwordFacId">Password</label>
-                    <input
-                      onChange={(e) => setFacultyPassword(e.target.value)}
-                      value={facultyPassword}
-                      className={classnames('form-control')}
-                      type="password"
-                      id="passwordFacId"
-                    />
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="col-md-1"></div>
-                  </div>
-
-                  <button type="submit" className="btn btn-info btn-block">
-                    Login
-                  </button>
-                </form>
-                <p className="text-center mt-2 ">
-                  <Link className="text-center" to="/forgotPassword/faculty">
-                    Forgot Password
-                  </Link>
-                </p>
-              </div>
-            </div> */}
-          </div>
-
-          {/* Student Login */}
           <div className="flex justify-end row m-5">
-            {/* Extra Student */}
             <div class="w-96 pr-10">
               <form
                 class="bg-blue-100 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4"
@@ -201,54 +151,27 @@ const FacultyStudentLoginPags = () => {
                 </div>
               </form>
             </div>
-            {/* Extra Student */}
-
-            {/* <div
-              className="w-96"
-              style={{
-                backgroundColor: 'white',
-                borderRadius: '1.2rem',
-                padding: '1rem 1rem 0rem 1rem',
-              }}
-            >
-              <div>
-                <h3 className="text-center">STUDENT LOGIN</h3>
-                <form onSubmit={studentFormHandler}>
-                  <div className="form-group">
-                    <label htmlFor="studentId">Registration Number</label>
-                    <input
-                      onChange={(e) => setStudentRegNum(e.target.value)}
-                      type="text"
-                      className={classnames('form-control')}
-                      id="studentId"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="passwordId">Password</label>
-                    <input
-                      onChange={(e) => setStudentPassword(e.target.value)}
-                      value={studentPassword}
-                      className={classnames('form-control')}
-                      type="password"
-                      id="passwordId"
-                    />
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="col-md-1"></div>
-                  </div>
-
-                  <button type="submit" className="btn btn-info btn-block ">
-                    Login
+          </div>}
+          <div class="flex items-center justify-between">
+            <div class="pr-4">
+            <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    onClick={()=> {setLogin('student')}}
+                  >
+                    Student
                   </button>
-                </form>
-                <p className="text-center">
-                  <Link className="text-center" to="/forgotPassword/student">
-                    Forgot Password
-                  </Link>
-                </p>
-              </div>
-            </div> */}
-          </div>
+            </div>
+            <div class="">
+            <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    onClick={()=> {setLogin('faculty')}}
+                  >
+                    Faculty
+                  </button>
+            </div>   
+            </div>
+          {/* <button onClick={()=> {setLogin('student')}}>Student</button>
+          <button onClick={()=> {setLogin('faculty')}}>Faculty</button> */}
         </div>
       </div>
     </div>
