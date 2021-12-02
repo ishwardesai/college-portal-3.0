@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 import HomeHelper from '../Components/HomeHelper';
-
 import { useHistory, withRouter } from 'react-router-dom';
+import ButtonPrimary from '../UI/ButtonPrimary';
 
 const StudentUpdateProfile = () => {
   const history = useHistory();
@@ -42,13 +41,20 @@ const StudentUpdateProfile = () => {
 
       {/* New Form */}
       <div class="grid place-items-center">
-      <div class="pt-4 w-full max-w-xs">
-        <form onSubmit={formHandler} class="bg-blue-100 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <div class="mb-4">
-
-          {/* Image Select */}
-          <div className="form-group">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Profile Picture</label>
+        <div class="pt-4 w-full max-w-xs">
+          <form
+            onSubmit={formHandler}
+            class="bg-blue-100 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          >
+            <div class="mb-4">
+              {/* Image Select */}
+              <div className="form-group">
+                <label
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  for="username"
+                >
+                  Profile Picture
+                </label>
                 <input
                   required
                   className="form-control"
@@ -57,80 +63,104 @@ const StudentUpdateProfile = () => {
                   id="inputId"
                   onChange={imagehandler}
                 ></input>
-          </div>
+              </div>
 
-          {/* Gender Select */}
-          <div class="pt-6 inline-block relative w-64">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Gender</label>
-            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-            onChange={(e) => setGender(e.target.value)}
-            className=""
-            id="genderId">
-              <option>Select</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+              {/* Gender Select */}
+              <div class="pt-6 inline-block relative w-64">
+                <label
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  for="username"
+                >
+                  Gender
+                </label>
+                <select
+                  class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  onChange={(e) => setGender(e.target.value)}
+                  className=""
+                  id="genderId"
+                >
+                  <option>Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
 
-          {/* Contact Number */}
-            <label class="pt-6 block text-gray-700 text-sm font-bold mb-2" for="username">
-              Contact Number
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"      onChange={(e) => setContactNumber(e.target.value)}
-            required
-            type="number"
-            // className="form-control"
-            id="numberId"/>
-          </div>
+              {/* Contact Number */}
+              <label
+                class="pt-6 block text-gray-700 text-sm font-bold mb-2"
+                for="username"
+              >
+                Contact Number
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setContactNumber(e.target.value)}
+                required
+                type="number"
+                // className="form-control"
+                id="numberId"
+              />
+            </div>
 
-          {/* Fathers Name */}
-          <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-              Father's Name
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" onChange={(e) => setFatherName(e.target.value)}
-            type="text"
-            // className="form-control"
-            id="fatherId"/>
-          </div>
+            {/* Fathers Name */}
+            <div class="mb-6">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Father's Name
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setFatherName(e.target.value)}
+                type="text"
+                // className="form-control"
+                id="fatherId"
+              />
+            </div>
 
-          {/* Fathers Contact */}
-          <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-              Father's Contact Number
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" onChange={(e) => setFatherContactNumber(e.target.value)}
-            type="number"
-            // className="form-control"
-            id="fathercnId"/>
-          </div>
+            {/* Fathers Contact */}
+            <div class="mb-6">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Father's Contact Number
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setFatherContactNumber(e.target.value)}
+                type="number"
+                // className="form-control"
+                id="fathercnId"
+              />
+            </div>
 
-          {/* Aadhar Card Number */}
-          <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-              Aadhar Card Number
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" onChange={(e) => setAadharCard(e.target.value)}
-            type="number"
-            // className="form-control"
-            id="aadharId"/>
-          </div>
+            {/* Aadhar Card Number */}
+            <div class="mb-6">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Aadhar Card Number
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setAadharCard(e.target.value)}
+                type="number"
+                // className="form-control"
+                id="aadharId"
+              />
+            </div>
 
-          <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-              Update
-            </button>
-          </div>
-        </form>
-      </div>
+            <div class="flex items-center justify-between">
+              <ButtonPrimary name="Update" />
+            </div>
+          </form>
+        </div>
       </div>
       {/* New Form */}
-
-
-
-
-
 
       {/* <div className="container mt-5">
         <div className="row ">
@@ -204,9 +234,6 @@ const StudentUpdateProfile = () => {
           </div>
         </div>
       </div> */}
-
-
-
     </div>
   );
 };

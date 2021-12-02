@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import FacultyHomeHelper from '../Components/FacultyHomeHelper';
-import Navbar from '../Components/Navbar';
+import Navbar from '../UI/Navbar';
 import classes from './FacultyInterface.module.css';
 
 const FacultyInterface = () => {

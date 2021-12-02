@@ -69,7 +69,7 @@ const Navbar = ({ active, user }) => {
   }
 
   return (
-    <div className=" h-full w-full flex justify-center items-start text-white border border-nav-inactive">
+    <div className=" container h-full w-full flex justify-center items-start text-white border border-nav-inactive">
       <ul className="h-2/5 flex flex-col justify-between  items-stretch mt-20 p">
         {navItems.map((item) => (
           <li

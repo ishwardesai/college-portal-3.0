@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import HomeHelper from '../Components/HomeHelper';
 import classes from './StudentHome.module.css';
-import Navbar from '../Components/Navbar';
+import Navbar from '../UI/Navbar';
 
 const Home = () => {
   const history = useHistory();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HomeHelper from '../../Components/HomeHelper';
 import { useHistory } from 'react-router-dom';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../UI/Navbar';
 import classes from './StudentMarks.module.css';
 
 const StudentTestPerformance = () => {

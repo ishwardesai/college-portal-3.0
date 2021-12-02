@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../Components/Navbar';
+import Navbar from '../UI/Navbar';
 import classes from './StudentAttendence.module.css';
 
 import { useHistory } from 'react-router-dom';
